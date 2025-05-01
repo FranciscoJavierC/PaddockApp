@@ -15,7 +15,7 @@ const HeroRaceCard = () => {
       // setIsLive(data.isLive);
       
       // Simulate live race for now
-      setTimeout(() => setIsLive(true), 5000);
+      //setTimeout(() => setIsLive(true), 5000);
     };
 
     checkLiveStatus();
@@ -30,12 +30,18 @@ const HeroRaceCard = () => {
 
 const styles = {
   container: {
-    width: '100%',
     padding: '2rem',
     backgroundColor: '#111',
     color: '#fff',
     borderRadius: '12px',
     marginBottom: '2rem',
+    width: '100%',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: '2rem',
   },
 };
 
