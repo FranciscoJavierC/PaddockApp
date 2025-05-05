@@ -8,114 +8,139 @@ const NextRaceInfo = () => {
   const trackFlag = '/assets/flags/USA.png';
 
   return (
-    <div style={styles.container}>
-      {/* LEFT PANEL */}
-      <div style={styles.left}>
-        <h3 style={styles.upNext}>ROUND 6 – UP NEXT</h3>
-        <div style={styles.dateBlock}>
-          <h1 style={styles.dateRange}>02–04</h1>
-          <span style={styles.month}>MAY</span>
-        </div>
-        <div style={styles.flagRow}>
-          <img src={trackFlag} alt="Flag" style={styles.flag} />
-          <span style={styles.circuit}>Miami International Autodrome</span>
-        </div>
+  <div style={styles.cardContainer}>
+    {/* HEADER: Next Race Info Row */}
+    <div style={styles.headerRow}>
+      <p style={styles.round}>Round 6</p>
+      <div style={styles.flagTitle}>
+        <img src={trackFlag} alt="USA Flag" style={styles.flag} />
         <h2 style={styles.raceName}>{raceName}</h2>
-        <p style={styles.sponsor}>Formula 1 Crypto.com Miami Grand Prix 2025</p>
       </div>
-  
-      {/* RIGHT PANEL */}
-      <div style={styles.right}>
-        <div style={styles.scheduleBox}>
-          {[
-            { name: 'Practice 1', day: 'FRI', time: '12:30 - 13:30' },
-            { name: 'Sprint Qualifying', day: 'FRI', time: '16:30 - 17:14' },
-            { name: 'Sprint', day: 'SAT', time: '12:00 - 13:00' },
-            { name: 'Qualifying', day: 'SAT', time: '16:00 - 17:00' },
-            { name: 'Race', day: 'SUN', time: '16:00' },
-          ].map((session) => (
-            <div style={styles.sessionRow} key={session.name}>
-              <span>{session.name}</span>
-              <span>{session.day}</span>
-              <span style={styles.timePill}>{session.time}</span>
-            </div>
-          ))}
-          <p style={styles.note}>Times displayed are local track times</p>
-        </div>
-        <img src={trackImage} alt="Circuit layout" style={styles.largeTrackImage} />
+      <p style={styles.detail}>{raceDate}</p>
+      <p style={styles.detail}>🌤️ 25°C</p>
+    </div>
+
+    {/* BOTTOM: Weekend Schedule + Circuit Image */}
+    <div style={styles.bottomRow}>
+      <div style={styles.column}>
+        <h3 style={styles.label}>Weekend Schedule</h3>
+        {[
+          { name: 'Practice 1', day: 'FRI', time: '12:30 - 13:30' },
+          { name: 'Sprint Qualifying', day: 'FRI', time: '16:30 - 17:14' },
+          { name: 'Sprint', day: 'SAT', time: '12:00 - 13:00' },
+          { name: 'Qualifying', day: 'SAT', time: '16:00 - 17:00' },
+          { name: 'Race', day: 'SUN', time: '16:00' },
+        ].map((session) => (
+          <p key={session.name} style={styles.sessionLine}>
+            {session.name} — {session.day} — {session.time}
+          </p>
+        ))}
+      </div>
+
+      <div style={styles.column}>
+        <img src={trackImage} alt="Miami Circuit" style={styles.trackImage} />
       </div>
     </div>
+  </div>
   );
 };
 
 const styles = {
-  upNext: {
+  cardContainer: {
+    backgroundColor: '#111',
+    borderRadius: '12px',
+    width: '100%',
+    maxWidth: '1000px',
+    margin: '0 auto',
+    padding: '2rem',
+  },
+  
+  column: {
+    flex: 1,
+    minWidth: '0',
+    padding: '1rem',
+    color: '#fff',
+  },
+  
+  label: {
     color: '#ff4d4d',
     fontWeight: 'bold',
     fontSize: '0.9rem',
-    letterSpacing: '1px',
     marginBottom: '0.5rem',
   },
-  dateBlock: {
-    display: 'flex',
-    alignItems: 'baseline',
-    gap: '0.5rem',
-    marginBottom: '0.5rem',
+  
+  detail: {
+    fontSize: '1rem',
+    color: '#ccc',
+    marginBottom: '0.3rem',
   },
-  dateRange: {
-    fontSize: '2.2rem',
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-  month: {
-    fontSize: '1.1rem',
-    backgroundColor: '#333',
-    padding: '2px 6px',
-    borderRadius: '4px',
-    color: '#fff',
-  },
-  sponsor: {
-    fontSize: '0.9rem',
-    color: '#999',
-    marginTop: '0.5rem',
-  },
-  right: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '1.5rem',
-  },
-  scheduleBox: {
-    backgroundColor: '#1c1c1c',
-    borderRadius: '12px',
-    padding: '1rem 1.5rem',
-    width: '100%',
-    maxWidth: '400px',
-  },
-  timePill: {
-    backgroundColor: '#333',
-    padding: '4px 10px',
-    borderRadius: '9999px',
+  
+  sessionLine: {
     fontSize: '0.95rem',
+    color: '#ddd',
+    marginBottom: '0.3rem',
   },
-  note: {
-    marginTop: '0.5rem',
-    fontSize: '0.8rem',
-    color: '#888',
-    fontStyle: 'italic',
+
+  headerRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '1rem',
+    paddingBottom: '1.5rem',
+    borderBottom: '1px solid #222',
+    marginBottom: '1.5rem',
   },
+  
+  flagTitle: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+  },
+  
+  raceName: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    margin: 0,
+  },
+  
+  round: {
+    fontSize: '1rem',
+    color: '#ccc',
+  },
+  
   flag: {
     width: '32px',
     height: 'auto',
-    marginRight: '0.5rem',
     borderRadius: '4px',
   },
-  largeTrackImage: {
-    width: '200px', // or try 180px if you want it tighter
+
+  bottomRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    gap: '2rem',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap', // so it doesn't break on mobile
+  },
+  
+  scheduleColumn: {
+    flex: 1,
+    minWidth: '250px',
+  },
+  
+  trackColumn: {
+    flexShrink: 0,
+    minWidth: '220px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  
+  trackImage: {
+    width: '100%',
+    maxWidth: '390px',
     height: 'auto',
-    alignSelf: 'center',
-    marginTop: '1rem',
+    borderRadius: '8px',
   },
 };
 
