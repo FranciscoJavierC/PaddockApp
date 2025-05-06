@@ -21,8 +21,9 @@ const NextRaceInfo = () => {
     </div>
 
     {/* BOTTOM: Weekend Schedule + Circuit Image */}
-    <div style={styles.bottomRow}>
-      <div style={styles.column}>
+    <div style={styles.scheduleAndImage}>
+    {/* Schedule Box */}
+      <div style={styles.scheduleBox}>
         <h3 style={styles.label}>Weekend Schedule</h3>
         {[
           { name: 'Practice 1', day: 'FRI', time: '12:30 - 13:30' },
@@ -31,13 +32,16 @@ const NextRaceInfo = () => {
           { name: 'Qualifying', day: 'SAT', time: '16:00 - 17:00' },
           { name: 'Race', day: 'SUN', time: '16:00' },
         ].map((session) => (
-          <p key={session.name} style={styles.sessionLine}>
-            {session.name} — {session.day} — {session.time}
-          </p>
+          <div style={styles.scheduleRow} key={session.name}>
+            <span style={styles.sessionName}>{session.name}</span>
+            <span style={styles.sessionDay}>{session.day}</span>
+            <span style={styles.sessionTime}>{session.time}</span>
+          </div>
         ))}
       </div>
 
-      <div style={styles.column}>
+      {/* Circuit Image aligned right */}
+      <div style={styles.trackColumn}>
         <img src={trackImage} alt="Miami Circuit" style={styles.trackImage} />
       </div>
     </div>
@@ -52,7 +56,7 @@ const styles = {
     width: '100%',
     maxWidth: '1000px',
     margin: '0 auto',
-    padding: '2rem',
+    padding: '1.2 rem 1.5 rem',
   },
   
   column: {
@@ -76,9 +80,9 @@ const styles = {
   },
   
   sessionLine: {
-    fontSize: '0.95rem',
+    fontSize: '1.05rem',
     color: '#ddd',
-    marginBottom: '0.3rem',
+    marginBottom: '0.15rem',
   },
 
   headerRow: {
@@ -87,9 +91,9 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     gap: '1rem',
-    paddingBottom: '1.5rem',
+    paddingBottom: '1rem',
     borderBottom: '1px solid #222',
-    marginBottom: '1.5rem',
+    marginBottom: '1rem',
   },
   
   flagTitle: {
@@ -99,7 +103,7 @@ const styles = {
   },
   
   raceName: {
-    fontSize: '1.5rem',
+    fontSize: '1.8rem',
     fontWeight: 'bold',
     margin: 0,
   },
@@ -127,18 +131,66 @@ const styles = {
     flex: 1,
     minWidth: '250px',
   },
+
+  scheduleBox: {
+    backgroundColor: '#1a1a1a',
+    borderRadius: '12px',
+    padding: '1rem 1.5rem',
+    maxWidth: '500px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.8rem',
+  },
+  
+  scheduleRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '0.6rem 1rem',
+    backgroundColor: '#222',
+    borderRadius: '8px',
+    color: '#fff',
+    fontSize: '1rem',
+    fontWeight: '500',
+  },
+  
+  sessionName: {
+    flex: 2,
+    textTransform: 'uppercase',
+  },
+  
+  sessionDay: {
+    flex: 1,
+    textAlign: 'center',
+    color: '#bbb',
+  },
+  
+  sessionTime: {
+    flex: 2,
+    textAlign: 'center',
+    backgroundColor: '#333',
+    padding: '0.3rem 0.7rem',
+    borderRadius: '12px',
+  },
+  scheduleAndImage: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: '2rem',
+    flexWrap: 'wrap', // responsive
+    marginTop: '1rem',
+  },
   
   trackColumn: {
     flexShrink: 0,
-    minWidth: '220px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   
   trackImage: {
+    maxWidth: '500px',
     width: '100%',
-    maxWidth: '390px',
     height: 'auto',
     borderRadius: '8px',
   },
