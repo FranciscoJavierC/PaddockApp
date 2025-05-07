@@ -3,6 +3,7 @@ import HeroRaceCard from './HeroRaceCard';
 import DriverStandingsCard from './DriverStandingsCard';
 import ConstructorStandingsCard from './ConstructorStandingsCard';
 import UpcomingRacesCard from './UpcomingRacesCard';
+import NewsSidebar from './NewsSidebar';
 
 const Dashboard = () => {
   return (
@@ -19,8 +20,12 @@ const Dashboard = () => {
             <ConstructorStandingsCard />
           </div>
 
-          <div style={styles.rightColumn}>
+          <div style={styles.centerColumn}>
             <UpcomingRacesCard />
+          </div>
+
+          <div style={styles.rightColumn}>
+            <NewsSidebar />
           </div>
         </div>
       </div>
@@ -58,8 +63,14 @@ const styles = {
     justifyContent: 'flex-start', // or center if you want vertical centering
   },
   contentWrapper: {
-    maxWidth: '1000px',
+    maxWidth: '1200px',
     margin: '0 auto',
+  },
+  centerColumn: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    gap: '1.5rem',
   },
 };
 

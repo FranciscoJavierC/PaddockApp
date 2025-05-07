@@ -39,7 +39,7 @@ const styles = {
     padding: "1.5rem",
     color: "#fff",
     width: "100%",
-    maxWidth: "360px",
+    maxWidth: "420px",
   },
   header: {
     display: 'flex',
