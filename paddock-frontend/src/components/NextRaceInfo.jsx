@@ -71,6 +71,7 @@ const styles = {
     fontWeight: 'bold',
     fontSize: '0.9rem',
     marginBottom: '0.5rem',
+    textAlign: 'center',
   },
   
   detail: {

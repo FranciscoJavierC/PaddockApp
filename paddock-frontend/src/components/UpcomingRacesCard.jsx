@@ -4,6 +4,9 @@ const upcomingRaces = [
   { name: "Miami Grand Prix", date: "4 May 2025", country: "🇺🇸" },
   { name: "Emilia Romagna GP", date: "18 May 2025", country: "🇮🇹" },
   { name: "Monaco Grand Prix", date: "25 May 2025", country: "🇲🇨" },
+  { name: "Spain Grand Prix", date: "1 June 2025", country: "🇪🇸"},
+  { name: "Canada Grand Prix", date: "15 June 2025", country: "🇨🇦"},
+  { name: "Austria Grand Prix", date: "29 June 2025", country: "🇦🇹"},
   // Add more if you like
 ];
 

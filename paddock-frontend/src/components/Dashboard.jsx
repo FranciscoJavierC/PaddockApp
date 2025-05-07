@@ -7,20 +7,21 @@ import UpcomingRacesCard from './UpcomingRacesCard';
 const Dashboard = () => {
   return (
     <div style={styles.page}>
-      {/* Hero Race Card (centered at the top) */}
-      <div style={styles.heroWrapper}>
-        <HeroRaceCard />
-      </div>
-
-      {/* Content Row: Left column with both standings stacked */}
-      <div style={styles.row}>
-        <div style={styles.leftColumn}>
-          <DriverStandingsCard />
-          <ConstructorStandingsCard />
+      {/* Shared container for max-width alignment */}
+      <div style={styles.contentWrapper}>
+        <div style={styles.heroWrapper}>
+          <HeroRaceCard />
         </div>
 
-        <div style={styles.centerColumn}>
-          <UpcomingRacesCard />
+        <div style={styles.contentRow}>
+          <div style={styles.leftColumn}>
+            <DriverStandingsCard />
+            <ConstructorStandingsCard />
+          </div>
+
+          <div style={styles.rightColumn}>
+            <UpcomingRacesCard />
+          </div>
         </div>
       </div>
     </div>
@@ -38,22 +39,27 @@ const styles = {
     justifyContent: 'center',
     marginBottom: '2rem',
   },
-  row: {
+  contentRow: {
     display: 'flex',
-    gap: '2rem',
+    gap: '5rem',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    alignItems: 'flex-start', // aligns top of cards
   },
+
   leftColumn: {
     display: 'flex',
     flexDirection: 'column',
     gap: '1.5rem',
   },
-  centerColumn: {
+
+  rightColumn: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    gap: '1.5rem',
+    justifyContent: 'flex-start', // or center if you want vertical centering
+  },
+  contentWrapper: {
+    maxWidth: '1000px',
+    margin: '0 auto',
   },
 };
 
