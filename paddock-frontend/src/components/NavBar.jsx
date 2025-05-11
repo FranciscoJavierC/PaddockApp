@@ -20,7 +20,7 @@ const NavBar = () => {
         </div>
 
         <div style={styles.right}>
-          <NavLink to="/schedule" style={navLinkStyle}>Calendar</NavLink>
+          <NavLink to="/calendar" style={navLinkStyle}>Calendar</NavLink>
           <NavLink to="/drivers" style={navLinkStyle}>Drivers</NavLink>
           <NavLink to="/teams" style={navLinkStyle}>Teams</NavLink>
           <NavLink to="/news" style={navLinkStyle}>News</NavLink>

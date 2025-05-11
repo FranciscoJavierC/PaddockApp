@@ -2,7 +2,7 @@ import React from 'react';
 
 const NextRaceInfo = () => {
   const raceName = 'Miami Grand Prix';
-  const raceDate = '4 May 2025';
+  const raceDate = '02 - 04 May 2025';
   const raceTime = '16:00 PST';
   const trackImage = '/assets/circuits/miami-circuit.png';
   const trackFlag = '/assets/flags/USA.png';

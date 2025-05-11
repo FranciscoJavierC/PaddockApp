@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Dashboard from "./Dashboard";
-import NavBar from './NavBar'; // adjust if you're in a different folder
+import NavBar from './NavBar';
+import RaceCalendar from './RaceCalendar';
+
 
 const App = () => {
   return (
@@ -10,6 +12,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/calendar" element={<RaceCalendar />} />
       </Routes>
     </Router>
   );
