@@ -4,14 +4,20 @@
   min-height: 100vh;
 }
 
-.gridWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  position: relative;
+.calendarContainer {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.gridRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
 }
 
 .gridBox {
@@ -27,11 +33,11 @@
 }
 
 .gridBox.right {
-  align-self: flex-end;
+  margin-left: auto;
 }
 
 .gridBox.left {
-  align-self: flex-start;
+  margin-right: auto;
 }
 
 .gridBox.lower {
@@ -48,11 +54,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.roundLabel {
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 .flagIcon {
@@ -84,4 +85,28 @@
   object-fit: contain;
   margin-top: 0.5rem;
   border-radius: 4px;
+}
+
+.roundNumberOutside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px; /* slightly wider */
+  font-weight: bold;
+  color: #fff; /* Make it fully visible now */
+  margin: auto;
+}
+
+.roundText {
+  font-size: 1.1rem;
+  color: #999;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.roundDigit {
+  font-size: 10rem; /* bigger */
+  font-weight: 900; /* bolder */
+  line-height: 1;
 }
