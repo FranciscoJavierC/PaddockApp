@@ -21,8 +21,7 @@ const NavBar = () => {
 
         <div style={styles.right}>
           <NavLink to="/calendar" style={navLinkStyle}>Calendar</NavLink>
-          <NavLink to="/drivers" style={navLinkStyle}>Drivers</NavLink>
-          <NavLink to="/teams" style={navLinkStyle}>Teams</NavLink>
+          <NavLink to="/garage" style={navLinkStyle}>Garage</NavLink>
           <NavLink to="/news" style={navLinkStyle}>News</NavLink>
         </div>
       </div>

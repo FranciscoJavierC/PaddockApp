@@ -1,0 +1,60 @@
+.garagePage {
+  padding: 2rem;
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+.garageCard {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.garageNameplateRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.driverNameplate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.garageTeamLogo {
+  height: 30px;
+  opacity: 0.8;
+}
+
+.garageDriverImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.garageDriverImage {
+  height: 220px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.garageCarImage {
+  height: 200px; /*  Bigger */
+  max-width: 500px; /* Allow it to scale wider */
+  object-fit: contain;
+  opacity: 1;
+  margin: 0 auto;
+  display: block; /* Ensures it's centered */
+  transform: translateY(10px); /* Optional: slight visual nudge */
+}
+
+.garageCarImage:hover {
+  transform: scale(1.05);
+}
