@@ -10,12 +10,14 @@ const constructors = [
     carImage: "/assets/cars/mclaren_car.png",
     drivers: [
       {
+        id: "norris",
         name: "Lando Norris",
         number: 4,
         country: "🇬🇧",
         image: "/assets/drivers/norris.png",
       },
       {
+        id: "piastri",
         name: "Oscar Piastri",
         number: 81,
         country: "🇦🇺",
@@ -30,12 +32,14 @@ const constructors = [
     carImage: "/assets/cars/mclaren_car.png",
     drivers: [
       {
+        id: "leclerc",
         name: "Charles Leclerc",
         number: 16,
         country: "🇲🇨",
         image: "/assets/drivers/leclerc.png",
       },
       {
+        id: "hamilton",
         name: "Lewis Hamilton",
         number: 44,
         country: "🇬🇧",

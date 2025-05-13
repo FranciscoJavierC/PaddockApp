@@ -1,0 +1,55 @@
+.heroContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-bottom: 4px solid #ff8700; /* optional: team color */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.driverImageWrapper {
+  flex: 1;
+}
+
+.driverPortrait {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.driverInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.driverHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.driverName {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0;
+}
+
+.driverNumber {
+  font-size: 2rem;
+  color: #ff8700;
+  font-weight: bold;
+  margin: 0;
+}
+
+.flagIcon {
+  width: 48px;
+  height: auto;
+  border-radius: 4px;
+}

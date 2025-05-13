@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/GarageView.css";
 
 const GarageCard = ({ team }) => {
@@ -26,9 +27,13 @@ const GarageCard = ({ team }) => {
 
         {/* Driver Portrait Row */}
         <div className="garageDriverImages">
-          <img src={leftDriver.image} alt={leftDriver.name} className="garageDriverImage" />
+          <Link to={`/drivers/${leftDriver.id}`}>
+            <img src={leftDriver.image} alt={leftDriver.name} className="garageDriverImage" />
+          </Link>
           <img src={team.carImage} alt={`${team.teamName} car`} className="garageCarImage" />
-          <img src={rightDriver.image} alt={rightDriver.name} className="garageDriverImage" />
+          <Link to={`/drivers/${rightDriver.id}`}>
+            <img src={rightDriver.image} alt={rightDriver.name} className="garageDriverImage" />
+          </Link>
         </div>
       </div>
     </div>
