@@ -5,6 +5,7 @@ import Dashboard from "./Dashboard";
 import NavBar from './NavBar';
 import RaceCalendar from './RaceCalendar';
 import GarageView from './GarageView';
+import NewsPage from './NewsPage';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/calendar" element={<RaceCalendar />} />
         <Route path="/garage" element={<GarageView />} />
+        <Route path="/news" element={<NewsPage />} />
       </Routes>
     </Router>
   );
