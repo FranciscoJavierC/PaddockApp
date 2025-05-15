@@ -4,9 +4,10 @@
   gap: 2rem;
   padding: 2rem;
   background-color: #1a1a1a;
-  border-bottom: 4px solid #ff8700; /* optional: team color */
-  max-width: 1200px;
+  border-bottom: 4px solid #ff8700;
+  float: left;
   margin: 0 auto;
+  border-radius: 12px;
 }
 
 .driverImageWrapper {

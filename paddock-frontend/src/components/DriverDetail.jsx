@@ -1,5 +1,6 @@
 import React from "react";
 import DriverHero from "./DriverHero";
+import DriverInfo from "./DriverInfo";
 import "../styles/DriverDetail.css";
 import { useParams } from "react-router-dom";
 
@@ -8,7 +9,10 @@ const DriverDetail = () => {
 
   return (
     <div className="detailPage">
-      <DriverHero />
+      <div className="driverLayout">
+        <DriverHero />
+        <DriverInfo />
+      </div>
     </div>
   );
 };
