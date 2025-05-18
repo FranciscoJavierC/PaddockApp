@@ -1,56 +1,54 @@
-.heroContainer {
+.driverHeaderCard {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
   background-color: #1a1a1a;
-  border-bottom: 4px solid #ff8700;
-  float: left;
-  margin: 0 auto;
   border-radius: 12px;
+  border-left: 6px solid #ff8700; /* team accent */
+  max-width: 1200px;
 }
 
-.driverImageWrapper {
-  flex: 1;
-}
-
-.driverPortrait {
-  width: 100%;
-  max-width: 300px;
+.driverPhoto {
+  width: 160px;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-.driverInfo {
-  flex: 2;
+.driverInfoBlock {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.driverHeader {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
+  color: white;
 }
 
 .driverName {
-  font-size: 2.5rem;
-  color: white;
-  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
 }
 
-.driverNumber {
-  font-size: 2rem;
-  color: #ff8700;
-  font-weight: bold;
-  margin: 0;
+.driverName .flag {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.driverTeam {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 0.25rem;
+}
+
+.driverDOB {
+  font-size: 0.95rem;
+  color: #999;
 }
 
 .flagIcon {
-  width: 48px;
+  width: 28px;
   height: auto;
-  border-radius: 4px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }

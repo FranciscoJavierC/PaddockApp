@@ -4,9 +4,13 @@ import "../styles/DriverHero.css";
 const driver = [
   {
     name: "Lando Norris",
-    driverImage: "/assets/drivers/norris.png",
+    image: "/assets/drivers/norris.png",
     number: 4,
-    flag: "/assets/flags/USA.png"
+    flag: "/assets/flags/USA.png",
+    team: "McLaren",
+    country: "United Kingdom",
+    dob: "(13/11/1999)",
+    age: "25"
   }
 ];
 
@@ -14,16 +18,14 @@ const DriverHero = () => {
   const d = driver[0];
 
   return (
-    <div className="heroContainer">
-      <div className="driverImageWrapper">
-        <img src={d.driverImage} alt={d.name} className="driverPortrait" />
-      </div>
-      <div className="driverInfo">
-        <div className="driverHeader">
-          <h1 className="driverName">{d.name}</h1>
-          <h2 className="driverNumber">#{d.number}</h2>
-        </div>
-        <img src={d.flag} alt="flag" className="flagIcon" />
+    <div className="driverHeaderCard">
+      <img src={d.image} alt={d.name} className="driverPhoto" />
+      <div className="driverInfoBlock">
+        <h1 className="driverName">
+          #{d.number} {d.name} <img src={d.flag} alt="flag" className="flagIcon" />
+        </h1>
+        <p className="driverTeam">{d.team}</p>
+        <p className="driverDOB">Age: {d.age} {d.dob}</p>
       </div>
     </div>
   );
